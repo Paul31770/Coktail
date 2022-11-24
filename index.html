@@ -1,0 +1,125 @@
+<!-- https://www.thecocktaildb.com/api.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js" defer></script>
+
+    <script src="app.js" defer></script>
+    <title>Cocktail</title>
+    <style>
+        img{
+            width: 75px;
+            height: 75px;
+        }
+        body{
+            background-color: rgb(241, 241, 241);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        h1{
+            text-align: center;
+            margin-top: 20px;
+            color: rgb(232, 71, 71);
+        }
+        #tous{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: auto;
+            max-width: 450px;
+            }
+        
+        #alea,#cock,#sel{
+            margin: auto;
+        }
+        #reponse{
+           
+            margin: auto;
+            margin-top: 5px;
+            max-width: 90%;
+            border-radius: 5px;
+            
+            
+        }
+        img{
+            padding-bottom: 5px;
+            margin-left: 5px;
+            border-radius: 50%;
+          
+        }
+
+    #res{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto;
+        padding-left: 10px;
+       
+            
+    }
+    #t{
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px rgba(159, 159, 159,0.2);
+    }
+    #oue{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto;
+
+    }
+    
+    h3{
+        padding-left: 7px;
+        
+    }
+    #i{
+        padding-left: 10px;
+    }
+    #text{
+        font-size: 10px;
+        padding-left: 3px;
+        
+       
+    }
+    
+   
+        
+       
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Cocktails</h1>
+    <form>
+        <div id="tous">
+           
+    <div id="alea">
+
+    <button type="submit" id="aleatoire">Aléatoire</button>
+</div>
+<div id="cock">
+    <p id="text">Recherche par nom</p>
+    <input type="text" id="cocktail">
+    <button type="submit" id="chercher">Recherche</button>
+</div>
+<div id="sel">
+    <p id="text">Recherche par ingrédient</p>
+    <select id="select" ></select>
+    <button type="submit" id="ingreChercher" >Rechercher</button>
+</div>
+</div>
+    </form>
+    <div id="reponse"></div>
+</body>
+</html>
